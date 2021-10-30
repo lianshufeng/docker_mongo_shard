@@ -31,3 +31,8 @@ docker-compose -f docker-compose-node1.yml -f docker-compose-node2.yml -f docker
 ````shell
 docker exec -it mongo-node1 bash /opt/mongo/cmd/setup.sh
 ````
+
+- 客户端
+````shell
+docker exec -it mongo-node1 bash /opt/mongo/cmd/client.sh
+````
