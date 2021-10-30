@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mongo-node2:
+    container_name: mongo-node2
+    image: mongo:$MongoVer
+    volumes:
+      - "/etc/localtime:/etc/localtime"
+      - "../keyFile.file:/keyfile.tmp"
+      - "./conf/:$ConfPath/"
+      - "./cmd/:$CmdPath/"
+      - "./script/:$ScriptPath/"
+      - "./store/data/mongo2:$StorePath/data/"
+      - "./store/logs/mongo2/:$StorePath/logs/"
+      - "./.env:/.env"
+    ports:
+      - "30018:27017"
+    restart: always
+    command: "bash $CmdPath/bootstrap.sh"
