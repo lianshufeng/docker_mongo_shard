@@ -14,6 +14,19 @@ mkdir -p ./store/data/mongo1  ./store/data/mongo2  ./store/data/mongo3
 chmod -R 777 ./store/data/mongo1 ./store/data/mongo2 ./store/data/mongo3
 ````
 
+
+- 启动容器
+````shell
+
+# 关闭
+docker-compose -f docker-compose-node1.yml -f docker-compose-node2.yml -f docker-compose-node3.yml down  
+
+# 启动
+docker-compose -f docker-compose-node1.yml -f docker-compose-node2.yml -f docker-compose-node3.yml up -d
+
+````
+
+
 - 初始化集群 (replSetInitiate)
 ````shell
 docker exec -it mongo-node1 bash /opt/mongo/cmd/setup.sh
