@@ -1,7 +1,7 @@
 version: '3'
 services:
-  mongo-node1:
-    container_name: mongo-node1
+  mongo-shard1:
+    container_name: mongo-shard1
     image: mongo:$MongoVer
     volumes:
       - "/etc/localtime:/etc/localtime"
