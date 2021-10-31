@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mongo-conf3:
+    container_name: mongo-conf3
+    image: mongo:$MongoVer
+    volumes:
+      - "/etc/localtime:/etc/localtime"
+      - "../keyFile.file:/keyfile.tmp"
+      - "./conf/:$ConfPath/"
+      - "./cmd/:$CmdPath/"
+      - "./script/:$ScriptPath/"
+      - "./store/data/mongo3:$StorePath/data/"
+      - "./store/logs/mongo3/:$StorePath/logs/"
+      - "./.env:/.env"
+    ports:
+      - "31019:27017"
+    restart: always
+    command: "bash $CmdPath/bootstrap.sh"
