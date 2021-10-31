@@ -17,4 +17,4 @@ echo "" >> $StorePath/logs/mongo.log
 
 
 #启动
-mongod --config $ConfPath/mongo_node.conf --setParameter maxTransactionLockRequestTimeoutMillis=3000
+mongod --config $ConfPath/mongo_node.conf --replSet $MongoSetsName --setParameter maxTransactionLockRequestTimeoutMillis=3000
