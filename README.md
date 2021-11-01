@@ -60,4 +60,16 @@ docker-compose -f docker-compose-router1.yml -f docker-compose-router2.yml up -d
 
 # addShard
 docker exec -it mongo-router1 bash /opt/mongo/cmd/addShard.sh MongoSetsShard1/192.168.63.130:30017,192.168.63.130:30018,192.168.63.130:30019
+
+# client
+docker exec -it mongo-router1 bash /opt/mongo/cmd/client.sh
+
+````
+
+- command line
+````shell
+# Enable Sharding for a Database
+sh.enableSharding("<database>")
+
+
 ````
