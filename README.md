@@ -1,5 +1,6 @@
 - Sharded Cluster
-![Image text](https://raw.github.com/yourName/repositpry/master/yourprojectName/img-folder/test.jpg)
+
+![Image text](https://raw.githubusercontent.com/lianshufeng/docker_mongo_shard/master/image/sharded-cluster-production-architecture.svg)
 
 - reference 
 ````shell
