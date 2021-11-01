@@ -5,8 +5,15 @@
 ````shell
 https://docs.mongodb.com/manual/sharding/
 ````
+- step 1
+````shell
+# ./toolsmakeKeys.sh make key
+keyFile.file
+````
 
 - step 1 
 ````shell
+
+# mongo-shard1/.env
 
 ````
