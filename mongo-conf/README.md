@@ -27,7 +27,7 @@ docker-compose -f docker-compose-conf1.yml -f docker-compose-conf2.yml -f docker
 ````
 
 
-- 初始化集群 (replSetInitiate)
+- 初始化集群
 ````shell
 docker exec -it mongo-conf1 bash /opt/mongo/cmd/setup.sh
 ````
