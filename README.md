@@ -68,8 +68,13 @@ docker exec -it mongo-router1 bash /opt/mongo/cmd/client.sh
 
 - command line
 ````shell
+# Sharding Status
+sh.status();
+
 # Enable Sharding for a Database
 sh.enableSharding("<database>")
 
+# Shard a Collection
+sh.shardCollection("<database>.<collection>", { <shard key field> : "hashed" } )
 
 ````
