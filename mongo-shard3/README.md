@@ -1,9 +1,9 @@
 
 - 防火墙
 ````shell
-sudo firewall-cmd --add-port=30117/tcp --permanent
-sudo firewall-cmd --add-port=30118/tcp --permanent
-sudo firewall-cmd --add-port=30119/tcp --permanent
+sudo firewall-cmd --add-port=30317/tcp --permanent
+sudo firewall-cmd --add-port=30318/tcp --permanent
+sudo firewall-cmd --add-port=30319/tcp --permanent
 firewall-cmd --reload 
 ````
 
@@ -29,10 +29,10 @@ docker-compose -f docker-compose-shard1.yml -f docker-compose-shard2.yml -f dock
 
 - 初始化集群
 ````shell
-docker exec -it mongo-shard1-1 bash /opt/mongo/cmd/setup.sh
+docker exec -it mongo-shard1-3 bash /opt/mongo/cmd/setup.sh
 ````
 
 - 客户端
 ````shell
-docker exec -it mongo-shard1-1 bash /opt/mongo/cmd/client.sh
+docker exec -it mongo-shard1-3 bash /opt/mongo/cmd/client.sh
 ````

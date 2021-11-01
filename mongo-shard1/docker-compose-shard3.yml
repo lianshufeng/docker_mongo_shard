@@ -1,7 +1,7 @@
 version: '3'
 services:
-  mongo-shard3:
-    container_name: mongo-shard3
+  mongo-shard3-1:
+    container_name: mongo-shard3-1
     image: mongo:$MongoVer
     volumes:
       - "/etc/localtime:/etc/localtime"
@@ -13,6 +13,6 @@ services:
       - "./store/logs/mongo3/:$StorePath/logs/"
       - "./.env:/.env"
     ports:
-      - "30019:27017"
+      - "30119:27017"
     restart: always
     command: "bash $CmdPath/bootstrap.sh"
