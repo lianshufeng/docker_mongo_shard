@@ -16,3 +16,7 @@ services:
       - "30318:27017"
     restart: always
     command: "bash $CmdPath/bootstrap.sh"
+    deploy:
+      resources:
+        limits:
+          memory: 4096M

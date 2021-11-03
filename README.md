@@ -92,6 +92,7 @@ docker exec -it mongo-router1 bash /opt/mongo/cmd/client.sh
 sh.enableSharding("message")
 
 # create index
+use message
 db.person.createIndex({"age":1})
 
 # shardCollection
@@ -108,6 +109,13 @@ db.person.insert({"age":6})
 db.person.insert({"age":7})
 db.person.insert({"age":8})
 db.person.insert({"age":9})
+
+
+# Refine Shard Key
+db.adminCommand( {
+   refineCollectionShardKey: "message.person",
+   key: { customer_id: 1, order_id: 1 }
+} )
 
 # resharding (about 5 minutes)
 db.adminCommand({
