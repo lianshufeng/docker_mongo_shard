@@ -16,6 +16,11 @@ services:
       - "30219:27017"
     restart: always
     command: "bash $CmdPath/bootstrap.sh"
+    ulimits:
+      nofile:
+        soft: 64000
+        hard: 64000
+      nproc:  4096
     deploy:
       resources:
         limits:
